@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import './App.css';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Main from './components/Main';
-//import Tables from './components/Tables';
 
 import { BrowserRouter } from 'react-router-dom';
 

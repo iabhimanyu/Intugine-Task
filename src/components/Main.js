@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import Home from './Home';
-import Tables from './Tables';
-
+import Timelines from './Timelines';
 import { Switch, Route, Redirect} from 'react-router-dom';
 
 class Main extends Component {
@@ -13,27 +11,15 @@ class Main extends Component {
   }
 
   render() {
-    const HomePage = () => {
-        return(
-            <Home 
-            />
-        );
-      }
-
-
-
-
+    
     return (
       <div>
         <Header />
-        <Switch>
-          <Route path ="/home" component={HomePage} />
-          <Redirect to ="/home" />
-        
-        </Switch>
-        <Tables/>
-      
-        
+
+       
+        <Timelines/>
+       
+       
       </div>
     );
   }

@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import {Nav, Navbar, NavbarBrand,NavbarToggler,Collapse,NavItem, Jumbotron,Card, Button, CardImg, CardTitle, CardText, CardDeck,
     CardSubtitle, CardBody } from 'reactstrap';
-
-import { BrowserRouter, Route, Link } from "react-router-dom";
 import {NavLink} from 'react-router-dom';
 import Logo from '../assets/logo.svg';
 import Profile from '../assets/profile.svg';
 import Destination from '../assets/destination.svg';
-import { Switch, Redirect} from 'react-router-dom';
-import Decks from './Decks';
+
+import Cards from './Cards'
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -27,10 +25,6 @@ class Header extends Component {
 
     render() {
         
-
-
-
-
         return(
             <React.Fragment>
                 <Navbar dark expand="md">
@@ -62,48 +56,21 @@ class Header extends Component {
                         </Collapse>
                     </div>
                 </Navbar>
-                <Jumbotron> 
-                
+              
+              <Jumbotron>  
                 <div className="container">
                         <div className="row row-header">
                             <div className="col-12 col-sm-6">
-         
-            
-            <CardDeck>
-      <Card style={{width:"100px", height:"100px"}}>
-        <CardBody >
-          <CardTitle>Card title</CardTitle>
-        </CardBody>
-      </Card>
-      <Card style={{width:"100px", height:"100px"}}>
-        <CardBody >
-          <CardTitle>Card title</CardTitle>
-        </CardBody>
-      </Card>
-      <Card style={{width:"100px", height:"100px"}}>
-        <CardBody >
-          <CardTitle>Card title</CardTitle>
-        </CardBody>
-      </Card>
-      <Card style={{width:"100px", height:"100px"}}>
-        <CardBody >
-          <CardTitle>Card title</CardTitle>
-        </CardBody>
-      </Card>
-      <Card style={{width:"100px", height:"100px"}}>
-        <CardBody >
-          <CardTitle>Card title</CardTitle>
-        </CardBody>
-      </Card>
-     
-    </CardDeck>
-                               
+
+                              <Cards/>
+                         
+                          
                             </div>
                         </div>
                     </div>
                     
-                </Jumbotron>
                 
+                </Jumbotron>
             </React.Fragment>
         );
     }
